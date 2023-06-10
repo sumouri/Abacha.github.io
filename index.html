@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Protfolio</title>
+    <script src="https://kit.fontawesome.com/3afcdf6216.js" crossorigin="anonymous"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <h3 class="logo"><span>{</span>ABACHA<span>}</span></h3>
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfilio">Portfolio</a></li>
+                <li><a href="#contect">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="headertext">
+            <p>Web/Mobile Developer</p>
+            <h1>Hello, I'm <span>Abacha</span> <br>Abderraouf From Algeria</h1>
+            <img src="images/Programming-pana (1).png" alt="Image" class="image">
+        </div>
+    </div>
+</div>
+<!-----about------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="aboutcol1">
+                <img src="images/Artificial intelligence-pana.png" alt="">
+            </div>
+            <div class="aboutcol2">
+                <h1 class="subtitle">About me</h1>
+                <p>Versatile Creative Professional: A multi-talented creative with expertise in design, writing, and problem-solving.<br>
+                    Collaborative Team Player: Thrives in teamwork, contributing ideas and fostering positive relationships.<br>
+                    Meticulous Attention to Detail: Ensures polished, high-quality work with a keen eye for precision.<br>
+                    Continuous Learner: Committed to staying updated on industry trends and delivering innovative solutions. </p>
+            <div class="tabtitle">
+                <p class="tablinks activelink" onclick="opentab('skills')">Skills</p>
+                <p class="tablinks" onclick="opentab('experience')">Experience</p>
+                <p class="tablinks" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tabcontents active-tab" id="skills">
+                <ul>
+                    <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                    <li><span>Web Development</span><br>Web App Development</li>
+                    <li><span>App Development</span><br>Building Android Apps</li>
+                </ul>
+            </div>
+            <div class="tabcontents" id="experience">
+                <ul>
+                    <li><span>2020 - current</span><br>third year in University</li>
+                    <li><span>2022 - current</span><br>GDG-Setif Organizer</li>
+                </ul>
+            </div>
+            <div class="tabcontents" id="education">
+                <ul>
+                    <li><span>2020</span><br>University Ferhat abbas Setif</li>
+                    <li><span>2022</span><br>Mbi Algeria Campus</li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!------------------services------->
+<div id="services">
+    <div class="container">
+        <h1 class="subtitle">My Services</h1>
+        <div class="serviceslist">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>I offer web design services that encompass creating attractive websites, optimizing for search engines, ensuring responsive design, providing maintenance and updates, integrating e-commerce, and developing custom web applications. Let's build your online presence together!</p>
+            <a href="#">learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-mobile"></i>
+                <h2>App Design</h2>
+                <p>I develop cross-platform mobile applications using Flutter. From UI/UX design to backend integration, I create efficient and visually appealing apps for both iOS and Android. Let's bring your app idea to life with Flutter's power and versatility!</p>
+            <a href="#">learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-figma"></i>
+                <h2>UI/UX Design</h2>
+                <p>I offer application design services for mobile apps, web applications, and desktop software. From UI/UX design to prototyping and visual design, I create intuitive and engaging user experiences. Let's collaborate to bring your digital solution to life!</p>
+            <a href="#">learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-----------portfilio---------->
+<div id="portfilio">
+    <div class="container">
+        <h1 class="subtitle">My Work</h1>
+        <div class="worklist">
+            <div class="work">
+                <img src="images/life_blood_poster.png" alt="poster">
+                <div class="layer">
+                    <h3>Life Blood</h3>
+                    <p>Android mobile application based on flutter for blood donation online</p>
+                    <a href="document/app-release.apk" download><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/zakati app.png" alt="poster">
+                <div class="layer">
+                    <h3>Zakati app</h3>
+                    <p>web and Android application based on Adobe XD for zakat donation</p>
+                    <a href="document/ZAKAT_12.xd" download><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/portfolio.png" alt="poster">
+                <div class="layer">
+                    <h3>Portfolio</h3>
+                    <p>a web application developed by HTML CSS and the JavaScript for show the profile </p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See More</a>
+    </div>
+</div>
+<!-------------contectus------------>
+<div id="contect">
+    <div class="container">
+        <div class="row">
+            <div class="contactleft">
+                <h1 class="subtitle">Contact Me</h1>
+                <p> <i class="fa-solid fa-paper-plane"></i> ourisum0@gmail.com</p>
+                <p> <i class="fa-solid fa-phone"></i> 0556055844</p>
+                <div class="socialicons">
+                    <a href="https://www.linkedin.com/in/abderraouf-abacha-4677b2256/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/sumouri"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <a href="document/C.V.pdf" class="btn btn2" download>Download CV</a>
+            </div>
+            <div class="contactright">
+                <form action="https://formsubmit.co/ourisum0@gmail.com" method="POST">
+                    <input type="text"  name="Name" placeholder="Your Name" required>
+                    <input name="Email" type="Email" placeholder="Email" required>
+                    <textarea name="Message" rows="6" placeholder="How can we help you ?"></textarea>
+                    <button type="submit" class="btn btn2">submit</button>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>copyright © {Abacha} made by Abacha Abderraouf </p>
+    </div>
+</div>
+</body>
+</html>
