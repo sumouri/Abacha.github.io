@@ -350,6 +350,8 @@ nav .fa-solid{
         width: 200px;
         height: 100vh;
         padding-top: 50px;
+        z-index: 1001;
+        transition: right 0.3s ease;
     }
     nav ul li{
         display: block;
@@ -360,7 +362,12 @@ nav .fa-solid{
         top: 25px;
         left: 25px;
         cursor: pointer;
-    
+        display: block;
+    }
+    nav .fa-solid{
+        display: block;
+        cursor: pointer;
+        font-size: 25px;
     }
     .subtitle{
         font-size: 30px;
