@@ -17,3 +17,21 @@ function openmenu(){
 function closemenu(){
     sidemenu.style.right = "-200px";
 }
+
+// Privacy Banner Functions
+function closePrivacyBanner(){
+    var banner = document.querySelector('.privacy-banner');
+    if(banner){
+        banner.style.display = 'none';
+        // Store in localStorage so it doesn't show again in this session
+        localStorage.setItem('privacyBannerClosed', 'true');
+    }
+}
+
+// Check if banner should be shown on page load
+document.addEventListener('DOMContentLoaded', function() {
+    var banner = document.querySelector('.privacy-banner');
+    if(banner && localStorage.getItem('privacyBannerClosed') === 'true'){
+        banner.style.display = 'none';
+    }
+});

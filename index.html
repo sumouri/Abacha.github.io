@@ -10,6 +10,14 @@
     <script src="https://smtpjs.com/v3/smtp.js"></script>
 </head>
 <body>
+<!-- Privacy Policy Banner -->
+<div class="privacy-banner">
+    <div class="container">
+        <p>🔒 <strong>Privacy Policy:</strong> We respect your privacy. <a href="privacy-policy.html">Read our Privacy Policy</a> for Vormi Network apps.</p>
+        <button onclick="closePrivacyBanner()" class="close-banner">×</button>
+    </div>
+</div>
+
 <div id="header">
     <div class="container">
         <nav>
@@ -20,6 +28,7 @@
                 <li><a href="#services">Services</a></li>
                 <li><a href="#portfilio">Portfolio</a></li>
                 <li><a href="#contect">Contact</a></li>
+                <li><a href="privacy-policy.html" class="privacy-link">🔒 Privacy Policy</a></li>
                 <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
             </ul>
             <i class="fa-solid fa-bars" onclick="openmenu()"></i>
@@ -40,34 +49,43 @@
             </div>
             <div class="aboutcol2">
                 <h1 class="subtitle">About me</h1>
-                <p>Versatile Creative Professional: A multi-talented creative with expertise in design, writing, and problem-solving.<br>
-                    Collaborative Team Player: Thrives in teamwork, contributing ideas and fostering positive relationships.<br>
-                    Meticulous Attention to Detail: Ensures polished, high-quality work with a keen eye for precision.<br>
-                    Continuous Learner: Committed to staying updated on industry trends and delivering innovative solutions. </p>
-            <div class="tabtitle">
-                <p class="tablinks activelink" onclick="opentab('skills')">Skills</p>
-                <p class="tablinks" onclick="opentab('experience')">Experience</p>
-                <p class="tablinks" onclick="opentab('education')">Education</p>
-            </div>
-            <div class="tabcontents active-tab" id="skills">
-                <ul>
-                    <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
-                    <li><span>Web Development</span><br>Web App Development</li>
-                    <li><span>App Development</span><br>Building Android Apps</li>
-                </ul>
-            </div>
-            <div class="tabcontents" id="experience">
-                <ul>
-                    <li><span>2020 - current</span><br>third year in University</li>
-                    <li><span>2022 - current</span><br>GDG-Setif Organizer</li>
-                </ul>
-            </div>
-            <div class="tabcontents" id="education">
-                <ul>
-                    <li><span>2020</span><br>University Ferhat abbas Setif</li>
-                    <li><span>2022</span><br>Mbi Algeria Campus</li>
-                </ul>
-            </div>
+                <p><strong>UI/UX and Front-end Developer | Sales Leader</strong><br>
+                    Based in Setif, Algeria, I am passionate about building digital solutions that drive business results and deliver value to clients. I have experience in mobile/web app development, UI/UX design, and commercial strategy.</p>
+                <div class="tabtitle">
+                    <p class="tablinks activelink" onclick="opentab('skills')">Skills</p>
+                    <p class="tablinks" onclick="opentab('experience')">Experience</p>
+                    <p class="tablinks" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tabcontents active-tab" id="skills">
+                    <ul>
+                        <li><strong>Frontend:</strong> JS, Flutter, HTML/CSS, Java</li>
+                        <li><strong>Frameworks:</strong> Node.js, Firebase, React (basics)</li>
+                        <li><strong>Tools:</strong> Git, VS Code, Android Studio, Figma</li>
+                        <li><strong>Business:</strong> Sales, Team Leadership</li>
+                        <li><strong>Languages:</strong> Arabic (Native), French (Fluent), English (Professional)</li>
+                        <li><strong>Certifications:</strong> Cisco Networking Level 2</li>
+                    </ul>
+                </div>
+                <div class="tabcontents" id="experience">
+                    <ul>
+                        <li><strong>Sales Manager</strong> - Globle Parfum House (My Rose & Glory Collection), Aug 2023 – Present</li>
+                        <li><strong>Freelance Software Engineer</strong> (2022 - Present): Front-end web, mobile, and desktop apps (JS, Flutter, Java)</li>
+                        <li><strong>STEM Coach</strong> (2022 - 2023): Mentored students, led tech workshops</li>
+                        <li>GDG Setif member, speaker, and startup co-founder</li>
+                        <li>UI/UX Designer (Figma)</li>
+                    </ul>
+                    <h4>Projects</h4>
+                    <ul>
+                        <li><strong>Delivery Manager App (Flutter + Firebase):</strong> Manage and export deliveries</li>
+                        <li><strong>Cargo Tracking System (Python):</strong> Track shipments and export PDFs</li>
+                    </ul>
+                </div>
+                <div class="tabcontents" id="education">
+                    <ul>
+                        <li><strong>Master's Degree in Computer Science</strong> (Expected soon)</li>
+                        <li><strong>Bachelor's Degree in Computer Science</strong> (2023), Frhat Abbas University, Setif</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -127,6 +145,39 @@
                     <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
+            <!-- New APK Projects -->
+            <div class="work">
+                <img src="images/client.png" alt="Client App">
+                <div class="layer">
+                    <h3>Client App</h3>
+                    <p>Android app for clients. Download and explore the client features.</p>
+                    <a href="document/apk/client_app.apk" download><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/fournisseur.png" alt="Fournisseur App">
+                <div class="layer">
+                    <h3>Fournisseur App</h3>
+                    <p>Android app for suppliers. Manage your products and orders.</p>
+                    <a href="document/apk/four_app.apk" download><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/livreur.png" alt="Livreur App">
+                <div class="layer">
+                    <h3>Livreur App</h3>
+                    <p>Android app for delivery personnel. Track and deliver orders efficiently.</p>
+                    <a href="document/apk/livreur_app.apk" download><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/artisan.png" alt="Artisan App">
+                <div class="layer">
+                    <h3>Artisan App</h3>
+                    <p>Android app for artisans. Manage your artisan services and clients.</p>
+                    <a href="document/apk/art_app.apk" download><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
         </div>
         <a href="#" class="btn">See More</a>
     </div>
@@ -144,7 +195,7 @@
                     <a href="https://github.com/sumouri"><i class="fa-brands fa-github"></i></a>
                     <a href="#"><i class="fa-brands fa-instagram"></i></a>
                 </div>
-                <a href="document/C.V.pdf" class="btn btn2" download>Download CV</a>
+                <a href="document/Mycv.pdf" class="btn btn2" download>Download CV</a>
             </div>
             <div class="contactright">
                 <form action="https://formsubmit.co/ourisum0@gmail.com" method="POST">
@@ -158,7 +209,7 @@
         </div>
     </div>
     <div class="copyright">
-        <p>copyright © {Abacha} made by Abacha Abderraouf </p>
+        <p>copyright © {Abacha} made by Abacha Abderraouf | <a href="privacy-policy.html">Privacy Policy</a></p>
     </div>
 </div>
 </body>
