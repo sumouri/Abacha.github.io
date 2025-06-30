@@ -121,6 +121,14 @@
     <div class="container">
         <h1 class="subtitle">My Work</h1>
         <div class="worklist">
+            <!-- Navigation Buttons -->
+            <button class="nav-btn left" onclick="scrollWorklist('left')">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="nav-btn right" onclick="scrollWorklist('right')">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+            
             <div class="work">
                 <img src="images/life_blood_poster.png" alt="poster">
                 <div class="layer">
@@ -145,37 +153,44 @@
                     <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
-            <!-- New APK Projects -->
-            <div class="work">
-                <img src="images/client.png" alt="Client App">
-                <div class="layer">
+        </div>
+        
+        <!-- Download All Vormi Apps Section -->
+        <div class="download-section">
+            <h2>📱 Download All Vormi Network Apps</h2>
+            <p>Get all the Vormi Network applications for a complete ecosystem experience</p>
+            <div class="download-grid">
+                <div class="download-card">
+                    <img src="images/client.png" alt="Client App">
                     <h3>Client App</h3>
-                    <p>Android app for clients. Download and explore the client features.</p>
-                    <a href="document/apk/client_app.apk" download><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <p>Browse products, place orders, track deliveries</p>
+                    <a href="document/apk/client_app.apk" download class="download-btn">
+                        <i class="fa-solid fa-download"></i> Download APK
+                    </a>
                 </div>
-            </div>
-            <div class="work">
-                <img src="images/fournisseur.png" alt="Fournisseur App">
-                <div class="layer">
+                <div class="download-card">
+                    <img src="images/fournisseur.png" alt="Fournisseur App">
                     <h3>Fournisseur App</h3>
-                    <p>Android app for suppliers. Manage your products and orders.</p>
-                    <a href="document/apk/four_app.apk" download><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <p>Manage inventory, process orders, track sales</p>
+                    <a href="document/apk/four_app.apk" download class="download-btn">
+                        <i class="fa-solid fa-download"></i> Download APK
+                    </a>
                 </div>
-            </div>
-            <div class="work">
-                <img src="images/livreur.png" alt="Livreur App">
-                <div class="layer">
+                <div class="download-card">
+                    <img src="images/livreur.png" alt="Livreur App">
                     <h3>Livreur App</h3>
-                    <p>Android app for delivery personnel. Track and deliver orders efficiently.</p>
-                    <a href="document/apk/livreur_app.apk" download><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <p>Route optimization, order tracking, delivery updates</p>
+                    <a href="document/apk/livreur_app.apk" download class="download-btn">
+                        <i class="fa-solid fa-download"></i> Download APK
+                    </a>
                 </div>
-            </div>
-            <div class="work">
-                <img src="images/artisan.png" alt="Artisan App">
-                <div class="layer">
+                <div class="download-card">
+                    <img src="images/artisan.png" alt="Artisan App">
                     <h3>Artisan App</h3>
-                    <p>Android app for artisans. Manage your artisan services and clients.</p>
-                    <a href="document/apk/art_app.apk" download><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <p>Manage bookings, client communications, services</p>
+                    <a href="document/apk/art_app.apk" download class="download-btn">
+                        <i class="fa-solid fa-download"></i> Download APK
+                    </a>
                 </div>
             </div>
         </div>

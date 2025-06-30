@@ -189,6 +189,15 @@ nav ul li a:hover::after{
     gap: 40px;
     scroll-behavior: smooth;
     padding-bottom: 20px;
+    position: relative;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    justify-content: center; /* Center items initially */
+    align-items: center;
+    min-height: 400px; /* Ensure consistent height */
+}
+.worklist::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
 }
 .work {
     min-width: 320px;
@@ -567,41 +576,137 @@ nav ul li a.active::after {
     height: calc(100vh - 50px);
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
-.worklist::-webkit-scrollbar {
-    display: none;
-}
-/* Hide scrollbar for IE, Edge and Firefox */
-.worklist {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-}
-
-/* Scroll buttons */
-.scroll-btn {
-    background: #ff004f;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    font-size: 22px;
+/* Navigation Buttons */
+.nav-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 2;
+    background: rgba(255, 0, 79, 0.9);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
     cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    transition: background 0.2s;
+    z-index: 10;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
-.scroll-btn:hover {
+
+.nav-btn:hover {
+    background: #ff004f;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.nav-btn.left {
+    left: 10px;
+}
+
+.nav-btn.right {
+    right: 10px;
+}
+
+.nav-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    transform: translateY(-50%) scale(1);
+    background: rgba(255, 0, 79, 0.3);
+}
+
+.nav-btn:disabled:hover {
+    background: rgba(255, 0, 79, 0.3);
+    transform: translateY(-50%) scale(1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Download Section */
+.download-section {
+    margin: 60px 0;
+    text-align: center;
+}
+
+.download-section h2 {
+    font-size: 36px;
+    color: white;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.download-section p {
+    color: #ababab;
+    font-size: 18px;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.download-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.download-card {
+    background: linear-gradient(135deg, #31395A, #232946);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.download-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.download-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+.download-card h3 {
+    color: #ff004f;
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.download-card p {
+    color: #ababab;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.download-btn {
+    background: #ff004f;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.download-btn:hover {
     background: #d10042;
-}
-.scroll-btn.left {
-    left: -20px;
-}
-.scroll-btn.right {
-    right: -20px;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 0, 79, 0.3);
 }
 
 @media (max-width: 1100px) {
@@ -619,5 +724,101 @@ nav ul li a.active::after {
     }
     .scroll-btn {
         display: none;
+    }
+    
+    /* Navigation buttons responsive */
+    .nav-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 16px;
+    }
+    
+    .nav-btn.left {
+        left: 5px;
+    }
+    
+    .nav-btn.right {
+        right: 5px;
+    }
+    
+    /* Download section responsive */
+    .download-section h2 {
+        font-size: 28px;
+    }
+    
+    .download-section p {
+        font-size: 16px;
+    }
+    
+    .download-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .download-card {
+        padding: 25px;
+    }
+}
+
+/* Mobile responsive for portfolio */
+@media only screen and (max-width: 600px) {
+    .worklist {
+        gap: 20px;
+        padding: 0 60px; /* Make room for navigation buttons */
+    }
+    
+    .work {
+        min-width: 280px;
+        max-width: 280px;
+        flex: 0 0 280px;
+    }
+    
+    .nav-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+    }
+    
+    .nav-btn.left {
+        left: 10px;
+    }
+    
+    .nav-btn.right {
+        right: 10px;
+    }
+    
+    .download-section {
+        margin: 40px 0;
+    }
+    
+    .download-section h2 {
+        font-size: 24px;
+    }
+    
+    .download-section p {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+    
+    .download-card {
+        padding: 20px;
+    }
+    
+    .download-card img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .download-card h3 {
+        font-size: 20px;
+    }
+    
+    .download-card p {
+        font-size: 13px;
+    }
+    
+    .download-btn {
+        padding: 10px 20px;
+        font-size: 13px;
     }
 }
